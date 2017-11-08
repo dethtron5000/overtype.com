@@ -1,0 +1,35 @@
+.Main {
+  text-align: center;
+  width: 100%;
+}
+
+.Main header {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+.Main-title {
+  font-weight: 700;
+  font-size: 600%;
+  color: #E24ADF;
+  text-transform: uppercase;
+  mix-blend-mode: screen;
+  left: 0;
+  top: 0;
+}
+
+.blu {
+  color: #4A90E2;
+}
+.purple {
+  left: 2%;
+  top: 0;
+  position: absolute;
+}
+
+
+
+
+
