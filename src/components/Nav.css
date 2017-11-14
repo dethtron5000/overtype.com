@@ -1,0 +1,30 @@
+.nav {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.nav a {
+	border: none;
+	color: #E24ADF;
+	background: none;
+	text-transform: uppercase;
+	font-size: 100%;
+	font-weight: 100;
+	display: block;
+	text-decoration: none;
+	margin-right: 15px;
+	margin-top: 10px;
+	padding: 5px;
+}
+
+.nav a:first-child {
+	margin-right: auto;
+	margin-left: 15px;
+}
+
+.nav .selected {
+	background-color: #4A90E2;
+	border-radius: 3px;
+	color: #0C067E;
+	font-weight: 300;
+}

@@ -1,0 +1,156 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import './Speaking.css';
+
+const list = [
+  {
+    d: 'April 2013',
+    title: 'Lightning Talk',
+    venue: 'Data Science Meetup at Meetup',
+    location: 'New York, New York',
+  },
+  {
+    d: 'May 2013',
+    title: 'Ignite!',
+    venue: 'Google IO',
+    location: 'San Francisco, California',
+  },
+  {
+    d: 'August 2013',
+    title: 'Solving Fictional Problems with NoSQL',
+    venue: 'NoSQL Now!',
+    location: 'San Jose, California',
+    link: 'https://www.youtube.com/watch?v=ls679nb5rQ8&t=261s',
+  },
+  {
+    d: 'October 2013',
+    title: 'Taming Galactus: How Marvel Uses Graph Theory and NoSQL to Understand its Fictional Universe',
+    link: 'https://livestream.com/hugeinc/events/2474611',
+    venue: 'Tech Talks at Huge',
+    location: 'Brooklyn, New York',
+  },
+  {
+    d: 'October 2013',
+    title: 'Graph Theory at Marvel',
+    venue: 'New York Graph Meetup',
+    location: 'New York, New York',
+  },
+  {
+    d: 'November 2013',
+    title: 'Graphing the Marvel Universe',
+    venue: 'GraphConnect',
+    location: 'New York, New York',
+  },
+  {
+    d: 'February 2014',
+    title: 'Telling Stories with Data from Stories',
+    venue: 'Visualized',
+    location: 'New York, New York',
+  },
+  {
+    d: 'April 2014',
+    title: 'Heroes and Villains and Data',
+    venue: 'Enterprise Data World',
+    location: 'Austin, Texas',
+  },
+  {
+    d: 'March 2015',
+    title: 'Stories in the Age of Data/Data in the Age of Story',
+    venue: 'Wentworth Institute of Technology Digital Humanities Colloquium',
+    location: 'Boston, Massachusetts',
+  },
+  {
+    d: 'April 2015',
+    title: 'The Data Experience',
+    venue: 'CDO Vision',
+    location: 'Washington, DC',
+  },
+  {
+    d: 'March 2016',
+    title: 'Design and Technology for Humans (and Super-Humans)',
+    venue: 'NYU Tandon Grand Colloquium',
+    location: 'Brooklyn, New York',
+  },
+  {
+    d: 'June 2016',
+    title: 'Human-Centered Design/Human-Centered Data',
+    venue: 'Northside Innovation Festival',
+    location: 'Brooklyn, New York',
+  },
+  {
+    d: 'July 2016',
+    title: 'Data, Design and Humans',
+    venue: 'Analytics Powering Outcomes for Veterans Summit',
+    location: 'Alexandria, Virginia',
+  },
+  {
+    d: 'October 2016',
+    title: 'Graph Theory for Designers',
+    venue: 'IDEO+ Orientation Day',
+    location: 'New York, New York',
+  },
+  {
+    d: 'September 2016',
+    title: 'Data + Design + Organizations',
+    venue: 'O\'Reily Strata',
+    location: 'New York, New York',
+  },
+  {
+    d: 'October 2016',
+    title: 'Resilience by Design',
+    venue: 'CNYCN Affordable Homeownership Summit',
+    location: 'New York, New York',
+  },
+  {
+    d: 'August 2017',
+    title: 'Your Purpose is in Your Data',
+    venue: 'New Haven Data Science Meetup',
+    location: 'New Haven, Connecticut',
+  },
+  {
+    d: 'October 2017',
+    title: 'Designing Resilient Communities',
+    venue: 'EcoDistricts Summit 2017',
+    location: 'Atlanta, Georgia',
+  },
+  {
+    d: 'October 2017',
+    title: 'Data and Advocacy',
+    venue: 'CNYCN Affordable Homeownership Summit',
+    location: 'New York, New York',
+  },
+];
+
+const HeadingText = (props) => {
+  const linked = (typeof (props.link) !== 'undefined');
+  if (linked) {
+    return (<a href={props.link}>{props.title}</a>);
+  }
+
+  return props.title;
+};
+
+const Speaking = () => (
+  <div className="speaking">
+    {
+      list.reverse().map(item => (
+        <section>
+          <h3>
+            <HeadingText title={item.title} link={item.link} key={item.title} />
+          </h3>
+          <time>{item.d}</time>
+          <div>{item.venue}</div>
+          <div>{item.location}</div>
+        </section>
+        ))
+    }
+  </div>
+);
+
+HeadingText.propTypes = {
+  link: PropTypes.string,
+  title: PropTypes.string.isRequired,
+};
+HeadingText.defaultProps = { link: undefined };
+
+export default Speaking;

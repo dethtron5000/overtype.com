@@ -108,7 +108,7 @@ class Interference extends Component {
         .attr('stroke-opacity', 0)
         .transition()
         .duration(700)
-        .attr('stroke-opacity', 0.5);
+        .attr('stroke-opacity', 0.8);
 
       l
         .exit()
