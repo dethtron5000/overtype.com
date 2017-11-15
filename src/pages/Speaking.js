@@ -102,6 +102,12 @@ const list = [
     location: 'New York, New York',
   },
   {
+    d: 'October 2016',
+    title: 'Resilience by Design',
+    venue: 'Wesleyan University Kai Entrepreneurship Speaker Series',
+    location: 'Middletown, Connecticut',
+  },
+  {
     d: 'August 2017',
     title: 'Your Purpose is in Your Data',
     venue: 'New Haven Data Science Meetup',

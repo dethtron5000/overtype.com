@@ -1,19 +1,31 @@
+.foot {
+	min-height: 40px;
+	font-size: 75%;
+	font-weight: 100;
+	margin-right: 15px;
+	margin-top: 10px;
+	display: flex;
+	justify-content: flex-end;
+
+}
 .contact {
 	display: flex;
-	min-height: 40px;
 	justify-content: flex-end;
 }
+.foot div:first-child {
+	margin-right: auto;
+	margin-left: 15px;
+}
 
+.copyright {
+	padding: 5px;
+}
 .contact a {
 	border: none;
 	color: #E24ADF;
 	background: none;
 	text-transform: uppercase;
-	font-size: 75%;
-	font-weight: 100;
 	display: block;
 	text-decoration: none;
-	margin-right: 15px;
-	margin-top: 10px;
 	padding: 5px;
 }
