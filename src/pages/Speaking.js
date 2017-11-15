@@ -121,6 +121,8 @@ const list = [
   },
 ];
 
+const rev = list.reverse();
+
 const HeadingText = (props) => {
   const linked = (typeof (props.link) !== 'undefined');
   if (linked) {
@@ -133,12 +135,13 @@ const HeadingText = (props) => {
 const Speaking = () => (
   <div className="speaking">
     {
-      list.reverse().map(item => (
+      rev.map(item => (
         <section>
+          <time>{item.d}</time>
           <h3>
             <HeadingText title={item.title} link={item.link} key={item.title} />
           </h3>
-          <time>{item.d}</time>
+
           <div>{item.venue}</div>
           <div>{item.location}</div>
         </section>

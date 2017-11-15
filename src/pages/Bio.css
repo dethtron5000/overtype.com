@@ -1,0 +1,20 @@
+.bio {
+	width: 50%;
+	margin-left: 15%;
+	font-size: 110%;
+}
+
+.bio li {
+	line-height: 100%;
+	list-style: none;;
+	font-size: 100%;
+	margin-bottom: 10%;
+}
+
+.bio h3 {
+	font-size: 250%;
+}
+
+.bio h4 {
+	font-size: 150%;
+}

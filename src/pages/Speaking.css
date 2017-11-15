@@ -1,5 +1,12 @@
+.speaking {
+	margin-left: 15%;
+	font-size: 75%;
+}
+
+
 .speaking time {
 	color: #4A90E2;
+	font-size: 80%;
 }
 
 .speaking h3 {

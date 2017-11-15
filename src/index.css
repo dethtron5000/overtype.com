@@ -12,3 +12,10 @@ body {
   color: #E24ADF;
 }
 
+a {
+	color: #0C067E;
+	text-decoration: none;
+	background-color: #4A90E2;
+	padding-left: 2px;
+	padding-right: 2px;
+}

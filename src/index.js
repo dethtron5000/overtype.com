@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 import { Route, HashRouter } from 'react-router-dom';
 
 import Main from './pages/Main';
-/* import Speaking from './pages/Speaking'; */
+import Bio from './pages/Bio';
+import Speaking from './pages/Speaking';
 /* <Route exact path="/bio" component={Main} />
         <Route exact path="/speaking" component={Speaking} /> */
 
@@ -20,7 +21,10 @@ ReactDOM.render(
   (
     <HashRouter>
       <div>
+        <Nav />
         <Route exact path="/" component={Main} />
+        <Route exact path="/bio" component={Bio} />
+        <Route exact path="/speaking" component={Speaking} />        
         <Footer />
       </div>
     </HashRouter>
