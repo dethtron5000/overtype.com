@@ -11,7 +11,7 @@ const Main = () => (
       <h1 className="Main-title blu">Overtype</h1>
       <h1 className="Main-title purple">Overtype</h1>
     </header>
-    <Interference width={window.innerWidth} height={(window.innerHeight - 40)} />
+    <Interference width={window.innerWidth} height={(window.innerHeight - 100)} />
   </div>);
 
 export default Main;
