@@ -10,6 +10,7 @@ body {
   font-family: Poppins, sans-serif;
   background-color: #0C067E;
   color: #E24ADF;
+  font-size: 110%;
 }
 
 a {
@@ -18,4 +19,9 @@ a {
 	background-color: #4A90E2;
 	padding-left: 2px;
 	padding-right: 2px;
+}
+
+.wrapper {
+	margin-left: 15%;
+	margin-right: 10%;
 }

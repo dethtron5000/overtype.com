@@ -1,8 +1,6 @@
 .speaking {
-	margin-left: 15%;
 	display: flex;
 	flex-wrap: wrap;
-	margin-right: 10%;
 }
 
 .speaking section {

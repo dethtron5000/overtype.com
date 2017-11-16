@@ -23,7 +23,7 @@ ReactDOM.render(
       <div>
         <Nav />
         <Route exact path="/" component={Main} />
-        <Route exact path="/bio" component={Bio} />
+        <Route exact path="/about" component={Bio} />
         <Route exact path="/speaking" component={Speaking} />        
         <Footer />
       </div>

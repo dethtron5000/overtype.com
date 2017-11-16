@@ -195,14 +195,31 @@ const SpeakingTopic = (props) => (
 );
 
 const Speaking = () => (
-  <div className="speaking">
-    {
-      Object.keys(rev).map(key => {
-        const item = rev[key];
-        return (<SpeakingTopic topic={item.topic} entries={item.entries} />);
-      })
-    }
-  </div>
+  <article className="wrapper">
+    <div>
+      <h2>I Would Love to Speak at Your Awesome Event</h2>
+      <p>I speak at confrences, events and colleges all over about how data, technology, design and systems interact. I've spoken to general, academic and technical audiences (and I enjoy all of them equally).</p>
+      <h4>Here's an example from 2013:</h4>
+      <iframe
+        id="ls_embed_1510843784"
+        src="https://livestream.com/accounts/646193/events/2474611/player?width=560&height=315&enableInfoAndActivity=true&defaultDrawer=&autoPlay=true&mute=false"
+        width="560"
+        height="315"
+        frameborder="0"
+        scrolling="no"
+        allowfullscreen />
+    </div>
+    <p><a href="mailto:booking@overtype.com">Drop me an email at <strong>booking@overtype.com</strong></a> to book me for your event.</p>
+    <h4>Here's a fuller list of topics and talks I've given over the past few years:</h4>
+    <div className="speaking">
+        {
+          Object.keys(rev).map(key => {
+            const item = rev[key];
+            return (<SpeakingTopic topic={item.topic} entries={item.entries} />);
+          })
+        }
+    </div>
+  </article>
 );
 
 const SpeakingItem = PropTypes.shape({
