@@ -1,5 +1,6 @@
 import React from 'react';
 import './Bio.css';
+import Venn from '../components/Venn';
 
 const Bio = () => (
   <div className="bio wrapper">
@@ -10,6 +11,8 @@ const Bio = () => (
     <p>I’m currently a director and creative technologist at <a href="https://www.ideo.com" target="_blank" rel="noopener noreferrer">IDEO</a>, where I use design and technology to launch new products and change big systems.</p>
     <p>I helped start the Digital Media Group at <a href=
     "https://marvel.com"  target="_blank" rel="noopener noreferrer">Marvel Entertainment</a> and created things like the first digital comics program backed by the comic industry, the first developer program in the comics industry, and used graph theory to understand the complexities of the Marvel Universe.</p>
+    <h3>What I do.</h3>
+    <Venn />
 	</div>
 );
 

@@ -1,0 +1,30 @@
+.blender {
+	mix-blend-mode: screen;
+	isolation: isolate;
+	fill: #E24ADF;
+	stroke: #eaeaea;
+	stroke-width: 1;
+	stroke-dasharray: 3,5;
+
+}
+
+.blender:nth-child(2n) {
+	fill: #4A90E2;
+}
+
+.blender:nth-child(3n) {
+	fill: #c0c0c0;
+}
+
+.venn-text {
+	fill: #eaeaea;
+	font-size: 90%;
+}
+
+.sm-circle {
+	fill: #eaeaea;
+}
+.guideline {
+	stroke: #eaeaea;
+	stroke-width: 1;
+}
