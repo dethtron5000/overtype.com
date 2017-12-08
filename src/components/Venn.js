@@ -30,7 +30,7 @@ class Venn extends Component {
     this.h = this.w;
 
     const dotgraph = d3.select(`#${this.target}`).append('svg')
-      .attr('height', Math.floor(0.8 * this.h))
+      .attr('height', Math.floor(0.7 * this.h))
       .attr('width', this.w)
       .append('g');
 

@@ -28,3 +28,9 @@
 	stroke: #eaeaea;
 	stroke-width: 1;
 }
+.center-circle {
+	stroke: #0C067E; 
+	stroke-dasharray: 1,2;
+	stroke-width: 2;
+	fill: none;
+}
