@@ -4,9 +4,15 @@ import './Nav.css';
 
 const Nav = () => (
   <nav className="nav">
-    <NavLink exact to="/">home</NavLink>
-    <NavLink exact activeClassName="selected" to="/about">about</NavLink>
-    <NavLink exact activeClassName="selected" to="/speaking">speaking</NavLink>
+    <NavLink exact to="/">
+      home
+    </NavLink>
+    <NavLink exact activeClassName="selected" to="/about">
+      about
+    </NavLink>
+    <NavLink exact activeClassName="selected" to="/speaking">
+      speaking
+    </NavLink>
   </nav>
 );
 

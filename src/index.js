@@ -24,7 +24,7 @@ ReactDOM.render(
         <Nav />
         <Route exact path="/" component={Main} />
         <Route exact path="/about" component={Bio} />
-        <Route exact path="/speaking" component={Speaking} />        
+        <Route exact path="/speaking" component={Speaking} />
         <Footer />
       </div>
     </HashRouter>

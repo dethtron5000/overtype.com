@@ -1,19 +1,10 @@
 {
-	"env": {
-		"browser": true
-	},
+    "env": {
+        "browser": true,
+        "node": true
+    },
     "extends": "airbnb",
-    "plugins": [
-        "react",
-        "jsx-a11y",
-        "import"
-    ],
-	"parserOptions": {
-		"ecmaFeatures": {
-		  "jsx": true
-		}
-	},
-	"rules": {
-	  "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
-	}
+    "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    }
 }
