@@ -1,0 +1,13 @@
+name: Build and Test
+run-name: ${{ github_actor }} is building Overtype.com
+on:
+    push:
+        branches:
+        - master
+jobs: 
+    Build-Overtype:
+        runs-on: ubuntu-latest
+        steps:
+        - run: npm build
+        - run: npm test
+    
