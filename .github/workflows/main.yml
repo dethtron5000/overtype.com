@@ -8,6 +8,8 @@ jobs:
     Build-Overtype:
         runs-on: ubuntu-latest
         steps:
+        - run: ls
+        - run: pwd
         - run: npm install
         - run: npm run build
     
