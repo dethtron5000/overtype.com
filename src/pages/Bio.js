@@ -29,19 +29,25 @@ function Bio() {
         Where I&#39;m at. Where I&#39;ve been.
       </h3>
       <p>
-        I’m currently a director of technology for content systems and APIs at&nbsp;
+        Currently I lead software teams as part of the Kindle group at Amazon,
+        focusing on creating the best possible reading experience for digital comics.
+      </p>
+      <p>
+
+        I’ve been a director of technology for content systems and APIs at&nbsp;
         <a href="http://nbcnews.com/" target="_blank" rel="noopener noreferrer">
           NBC News Digital
         </a>
-      &nbsp;.
-      </p>
-      <p>
-        In the past I was a director and creative technologist at&nbsp;
+        , focusing on CMSs and APIs that power high-velocity news reporting.
+        Before that, I was a director and creative technologist at&nbsp;
         <a href="https://www.ideo.com" target="_blank" rel="noopener noreferrer">
           IDEO
         </a>
         &nbsp;, focusing on the intersection of design and technology to launch new
-        products and change big systems.
+        products and change big systems.  I helped create models of shared mobility
+        for the government of Sweeden, designed software for flood resiliency for
+        New Yorkers post Superstorm Sandy, and created collaboration tools for the
+        Department of State.
       </p>
       <p>
         I helped start the Digital Media Group at&nbsp;
