@@ -43,7 +43,7 @@ function Bio() {
         <a href="https://www.ideo.com" target="_blank" rel="noopener noreferrer">
           IDEO
         </a>
-        &nbsp;, focusing on the intersection of design and technology to launch new
+        , focusing on the intersection of design and technology to launch new
         products and change big systems.  I helped create models of shared mobility
         for the government of Sweeden, designed software for flood resiliency for
         New Yorkers post Superstorm Sandy, and created collaboration tools for the
