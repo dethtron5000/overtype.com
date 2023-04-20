@@ -12,7 +12,6 @@ class Venn extends Component {
   constructor(props) {
     super(props);
     this.target = 'venn';
-    this.padding = 0;
     this.w = 0;
     this.h = 0;
     this.elems = [
@@ -64,15 +63,15 @@ class Venn extends Component {
       .attr('y', (d, i) => (Math.sin(radscale(i)) * (this.w / 3)) + this.w / 3 + 5)
       .attr('class', 'venn-text')
       .attr('id', (d, i) => `textblock-${i}`)
-      .text(d => d);
+      .text((d) => d);
 
     dotgraph
       .selectAll('line')
       .data(this.elems)
       .enter()
       .append('line')
-      .attr('x1', (d, i) => (Math.cos(radscale(i)) * this.w / 7 + this.w / 3))
-      .attr('y1', (d, i) => (Math.sin(radscale(i)) * this.w / 7 + this.w / 3))
+      .attr('x1', (d, i) => (Math.cos(radscale(i)) * (this.w / 7) + this.w / 3))
+      .attr('y1', (d, i) => (Math.sin(radscale(i)) * (this.w / 7) + this.w / 3))
       .attr('y2', (d, i) => (Math.sin(radscale(i)) * (this.w / 3)) + this.w / 3)
       .attr('x2', (d, i) => (Math.cos(radscale(i)) * (this.w / 7)) + this.w / 1.8)
       .attr('class', 'guideline');

@@ -12,11 +12,10 @@ class Interference extends Component {
   constructor(props) {
     super(props);
     this.target = '#graph';
-    this.padding = 0;
-    this.w = this.props.width;
-    this.h = this.props.height;
+    const { width, height } = props;
+    this.w = width;
+    this.h = height;
     this.elems = [];
-    this.currentoffset = 0;
     this.direction = 1;
     this.points = 50;
   }
@@ -32,16 +31,17 @@ class Interference extends Component {
     const linefunc = d3
       .line()
       .x((d, i) => xscale(i))
-      .y(d => d.cumulative)
+      .y((d) => d.cumulative)
       .curve(d3.curveBundle.beta(0.5));
 
     let { direction } = this;
     const { elems } = this;
 
     const shuffle = (a) => {
-      for (let i = a.length - 1; i > 0; i -= 1) {
+      const z = a;
+      for (let i = z.length - 1; i > 0; i -= 1) {
         const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
+        [z[i], z[j]] = [z[j], z[i]];
       }
     };
 
@@ -68,8 +68,8 @@ class Interference extends Component {
             cumulative = elems[0].pathspec[idx].cumulative + offset;
             break;
           default:
-            cumulative = elems[(elems.length - 2)].pathspec[idx].cumulative +
-            (((2 * (elems.length % 2)) - 1) * offset);
+            cumulative = elems[(elems.length - 2)].pathspec[idx].cumulative
+            + (((2 * (elems.length % 2)) - 1) * offset);
         }
 
         return {
@@ -80,7 +80,7 @@ class Interference extends Component {
       };
 
       const l = dotgraph
-        .selectAll('.sparkline').data(elems, d => d.id);
+        .selectAll('.sparkline').data(elems, (d) => d.id);
 
       if (direction === -1) {
         elems.shift();
@@ -99,8 +99,8 @@ class Interference extends Component {
       l
         .enter()
         .append('path')
-        .attr('id', d => d.id)
-        .attr('d', d => linefunc(d.pathspec))
+        .attr('id', (d) => d.id)
+        .attr('d', (d) => linefunc(d.pathspec))
         .attr('class', 'sparkline')
         .attr('fill', 'none')
         .attr('stroke', '#E24ADF')

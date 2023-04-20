@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
-import { Route, HashRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 
 import Main from './pages/Main';
 import Bio from './pages/Bio';
@@ -16,18 +16,23 @@ import Footer from './components/Footer';
 
 import './index.css';
 
-ReactDOM.render(
+const container = document.getElementById('root');
+
+const root = createRoot(container);
+
+root.render(
 
   (
     <HashRouter>
       <div>
         <Nav />
-        <Route exact path="/" component={Main} />
-        <Route exact path="/about" component={Bio} />
-        <Route exact path="/speaking" component={Speaking} />
+        <Routes>
+          <Route exact="true" path="/" element={<Main />} />
+          <Route exact="true" path="/about" element={<Bio />} />
+          <Route exact="true" path="/speaking" element={<Speaking />} />
+        </Routes>
         <Footer />
       </div>
     </HashRouter>
   ),
-  document.getElementById('root'),
 );
