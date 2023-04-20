@@ -33,7 +33,6 @@ function Bio() {
         focusing on creating the best possible reading experience for digital comics.
       </p>
       <p>
-
         I’ve been a director of technology for content systems and APIs at&nbsp;
         <a href="http://nbcnews.com/" target="_blank" rel="noopener noreferrer">
           NBC News Digital
