@@ -33,4 +33,4 @@ jobs:
         ${{ secrets.SVN_URL }} 
         --no-auth-cache 
         --username ${{ secrets.SVN_USERNAME }} 
-        --password ${{ secrets.SVN_PASSWORD }} 
+        --password ${{ secrets.SVN_PW }} 
