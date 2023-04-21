@@ -39,3 +39,5 @@ jobs:
       working-directory: ./overtype
     - run: svn add * --force
       working-directory: ./overtype
+    - run: svn commit
+      working-directory: ./overtype
