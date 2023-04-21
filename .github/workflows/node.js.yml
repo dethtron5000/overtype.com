@@ -29,7 +29,5 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
- 
- deploy:
-   steps:
-   - run: svn co --username ${{ secrets.SVN_USERNAME }} --password ${{ secrets.SVN_PASSWORD}} ${{ secrets.SVN_URL }}
+    - run: svn co --username ${{ secrets.SVN_USERNAME }} --password ${{ secrets.SVN_PASSWORD}} ${{ secrets.SVN_URL }}
+  
