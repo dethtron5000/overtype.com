@@ -36,6 +36,8 @@ jobs:
         --password ${{ secrets.SVN_PW }} 
     - run: ls -la
     - run: cp -av build/* overtype
+    - run: pwd
     - run: cd overtype
+    - run: pwd
     - run: ls -la
     - run: svn status
