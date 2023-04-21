@@ -37,3 +37,5 @@ jobs:
     - run: cp -av build/* overtype
     - run: svn status
       working-directory: ./overtype
+    - run: svn add --force
+      working-directory: ./overtype
