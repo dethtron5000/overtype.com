@@ -30,8 +30,9 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - run: svn co \
+        ${{ secrets.SVN_URL }} \
         --no-auth-cache \
         --username ${{ secrets.SVN_USERNAME }} \
         --password ${{ secrets.SVN_PASSWORD }} \
-        ${{ secrets.SVN_URL }}
+        
   
