@@ -29,7 +29,11 @@ function Bio() {
         Where I&#39;m at. Where I&#39;ve been.
       </h3>
       <p>
-        Currently I lead software teams as part of the Kindle group at Amazon,
+        Currently I lead software teams as part of the Kindle group at&nbsp;
+        <a href="https://www.amazon.com/kindle-dbs/comics-store/home">
+          Amazon
+        </a>
+        ,
         focusing on creating the best possible reading experience for digital comics.
       </p>
       <p>
