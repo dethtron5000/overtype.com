@@ -37,4 +37,5 @@ jobs:
     - run: ls -la
     - run: cp -a build/* overtype
     - run: cd overtype
+    - run: ls -la
     - run: svn status
