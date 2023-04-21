@@ -39,5 +39,5 @@ jobs:
       working-directory: ./overtype
     - run: svn add * --force
       working-directory: ./overtype
-    - run: svn commit
+    - run: svn commit -m "${{ github.event.head_commit.message }}"
       working-directory: ./overtype
