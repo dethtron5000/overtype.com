@@ -35,7 +35,7 @@ jobs:
         --username ${{ secrets.SVN_USERNAME }} 
         --password ${{ secrets.SVN_PW }} 
     - run: ls -la
-    - run: cp -a build/* overtype
+    - run: cp -av build/* overtype
     - run: cd overtype
     - run: ls -la
     - run: svn status
