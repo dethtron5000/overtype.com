@@ -34,5 +34,6 @@ jobs:
         --no-auth-cache 
         --username ${{ secrets.SVN_USERNAME }} 
         --password ${{ secrets.SVN_PW }} 
+    - run: cp -av build/* overtype
     - run: svn status
       working-directory: ./overtype
