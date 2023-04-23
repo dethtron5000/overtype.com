@@ -27,7 +27,7 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - name: Update SVN repo
-    - run: svn co 
+      run: svn co 
         ${{ secrets.SVN_URL }} 
         --no-auth-cache 
         --username ${{ secrets.SVN_USERNAME }} 
