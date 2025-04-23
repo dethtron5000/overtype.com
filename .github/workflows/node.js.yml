@@ -26,6 +26,12 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+
+    - name: Install Subversion
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y subversion
+    
     - name: Update SVN repo
       run: svn co 
         ${{ secrets.SVN_URL }} 
