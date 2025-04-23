@@ -43,9 +43,12 @@ jobs:
       working-directory: ./overtype
     - run: svn add * --force
       working-directory: ./overtype
-    - run: svn commit -m "${{ github.event.head_commit.message }}"
-        --username ${{ secrets.SVN_USERNAME }} 
-        --password ${{ secrets.SVN_PW }}     
+    - env:
+        COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+      run: |
+        svn commit -m "$COMMIT_MESSAGE" \
+          --username ${{ secrets.SVN_USERNAME }} \
+          --password ${{ secrets.SVN_PW }}
       working-directory: ./overtype
     - name: update remote repo
       uses: garygrossgarten/github-action-ssh@release
