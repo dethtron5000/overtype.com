@@ -28,7 +28,7 @@
     "eslint-plugin-react": "^7.35.2",
     "jest": "^30.0.5",
     "react-scripts": "^5.0.1",
-    "react-test-renderer": "^18.2.0"
+    "react-test-renderer": "^19.2.0"
   },
   "browserslist": {
     "production": [
