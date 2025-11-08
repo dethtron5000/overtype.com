@@ -15,20 +15,13 @@ function Footer() {
       </div>
       <div className="contact">
         <a href="mailto:peter@overtype.com">Email</a>
-        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a href="https://bsky.app/profile/overtype.com" target="_blank" rel="noopener noreferrer">Bluesky</a>
         <a
           href="https://www.linkedin.com/in/peterjolson/"
           target="_blank"
           rel="noopener noreferrer"
         >
           LinkedIn
-        </a>
-        <a
-          href="http://dethtron5000.tumblr.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Tumblr
         </a>
         <a
           href="https://stackoverflow.com/users/1540902/dethtron5000?tab=profile"
@@ -43,14 +36,6 @@ function Footer() {
           rel="noopener noreferrer"
         >
           GitHub
-        </a>
-        <a
-          href="https://zirk.us/@dethtron5000"
-          // eslint-disable-next-line react/no-invalid-html-attribute
-          rel="noopener noreferrer me"
-          target="_blank"
-        >
-          Mastodon
         </a>
       </div>
     </footer>
