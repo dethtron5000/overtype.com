@@ -47,6 +47,17 @@
   },
   "xo": {
     "prettier": true,
-    "react": true
+    "react": true,
+    "rules": {
+      "unicorn/filename-case": [
+        "error",
+        {
+          "cases": {
+            "camelCase": true,
+            "pascalCase": true
+          }
+        }
+      ]
+    }
   }
 }
