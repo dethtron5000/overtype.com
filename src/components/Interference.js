@@ -1,32 +1,29 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import {useEffect} from 'react';
 import * as d3 from 'd3';
 
-const makeScale = (size, domain) => d3.scaleLinear()
-  .range([0, size])
-  .domain([0, domain]);
+const makeScale = (size, domain) =>
+  d3.scaleLinear().range([0, size]).domain([0, domain]);
 
-// const seedVals = Array(...[100]).map(Function.call, Math.random);
+function Interference({width, height}) {
+  const target = '#graph';
+  const w = width;
+  const h = height;
 
-class Interference extends Component {
-  constructor(props) {
-    super(props);
-    this.target = '#graph';
-    const { width, height } = props;
-    this.w = width;
-    this.h = height;
-    this.elems = [];
-    this.direction = 1;
-    this.points = 50;
-  }
+  // These don't need to be state since d3 will manage them directly
+  const points = 50;
 
-  componentDidMount() {
-    const dotgraph = d3.select(this.target).append('svg')
-      .attr('height', this.h)
-      .attr('width', this.w)
+  useEffect(() => {
+    console.log('mounting svg');
+
+    const dotgraph = d3
+      .select(target)
+      .append('svg')
+      .attr('height', h)
+      .attr('id', 'mainsvg')
+      .attr('width', w)
       .append('g');
 
-    const xscale = makeScale(this.w, (this.points - 1));
+    const xscale = makeScale(w, points - 1);
 
     const linefunc = d3
       .line()
@@ -34,8 +31,8 @@ class Interference extends Component {
       .y((d) => d.cumulative)
       .curve(d3.curveBundle.beta(0.5));
 
-    let { direction } = this;
-    const { elems } = this;
+    let direction = 1;
+    const elems = [];
 
     const shuffle = (a) => {
       const z = a;
@@ -46,30 +43,35 @@ class Interference extends Component {
     };
 
     const appendGroup = () => {
-      const seeder = (elem, idx) => {
-        let seed;
-        if (elems.length === 0) {
-          seed = 20 * Math.random();
-        } else {
-          seed = Math.random();
-        }
+      const seeder = (element, idx) => {
+        const seed = elems.length === 0 ? 20 * Math.random() : Math.random();
 
-        const offset = Math.floor(0.02 * this.h * seed);
-        const midline = 0.5 * this.h;
+        const offset = Math.floor(0.02 * h * seed);
+        const midline = 0.5 * h;
         let cumulative;
         switch (elems.length) {
-          case 0:
-            cumulative = (midline - (0.02 * 10 * this.h)) + offset;
+          case 0: {
+            cumulative = midline - 0.02 * 10 * h + offset;
             break;
-          case 1:
+          }
+
+          case 1: {
             cumulative = elems[0].pathspec[idx].cumulative - offset;
             break;
-          case 3:
+          }
+
+          case 3: {
             cumulative = elems[0].pathspec[idx].cumulative + offset;
             break;
-          default:
-            cumulative = elems[(elems.length - 2)].pathspec[idx].cumulative
-            + (((2 * (elems.length % 2)) - 1) * offset);
+          }
+
+          default: {
+            console.log(elems);
+            console.log(typeof elems);
+            cumulative =
+              elems.at(-2).pathspec[idx].cumulative +
+							(2 * (elems.length % 2) - 1) * offset;
+          }
         }
 
         return {
@@ -79,8 +81,7 @@ class Interference extends Component {
         };
       };
 
-      const l = dotgraph
-        .selectAll('.sparkline').data(elems, (d) => d.id);
+      const l = dotgraph.selectAll('.sparkline').data(elems, (d) => d.id);
 
       if (direction === -1) {
         elems.shift();
@@ -88,16 +89,17 @@ class Interference extends Component {
           direction = 1;
         }
       } else {
-        const seedVal = [...new Array(this.points)].map(seeder);
-        elems.push({ pathspec: seedVal, id: Date.now() });
-        if (seedVal[0].cumulative > 0.7 * this.h) {
+        const seedValue = Array.from({length: points}).map((element, idx) =>
+          seeder(element, idx),
+        );
+        elems.push({pathspec: seedValue, id: Date.now()});
+        if (seedValue[0].cumulative > 0.7 * h) {
           shuffle(elems);
           direction = -1;
         }
       }
 
-      l
-        .enter()
+      l.enter()
         .append('path')
         .attr('id', (d) => d.id)
         .attr('d', (d) => linefunc(d.pathspec))
@@ -110,8 +112,7 @@ class Interference extends Component {
         .duration(700)
         .attr('stroke-opacity', 0.8);
 
-      l
-        .exit()
+      l.exit()
         .attr('stroke', '#4A90E2')
         .transition()
         .duration(500)
@@ -119,17 +120,17 @@ class Interference extends Component {
         .remove();
     };
 
-    d3.interval(appendGroup, 2000);
-  }
+    const intval = d3.interval(appendGroup, 2000);
+    return () => {
+      console.log('unmounting');
+      intval.stop();
 
-  render() {
-    return (<div id="graph" />);
-  }
+      d3.select('#mainsvg').remove();
+    };
+  }, [w, h]);
+
+  return <div id="graph" />;
 }
 
-Interference.propTypes = {
-  height: PropTypes.number.isRequired,
-  width: PropTypes.number.isRequired,
-};
 
 export default Interference;

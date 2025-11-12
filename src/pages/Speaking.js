@@ -1,5 +1,3 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import './Speaking.css';
 
 const groups = {};
@@ -30,7 +28,7 @@ const list = [
   {
     d: 'October 2013',
     title:
-      'Taming Galactus: How Marvel Uses Graph Theory and NoSQL to Understand its Fictional Universe',
+			'Taming Galactus: How Marvel Uses Graph Theory and NoSQL to Understand its Fictional Universe',
     link: 'https://livestream.com/hugeinc/events/2474611',
     venue: 'Tech Talks at Huge',
     location: 'Brooklyn, New York',
@@ -152,7 +150,7 @@ const list = [
 
 const reducer = (topics, item) => {
   const out = topics;
-  if (typeof out[item.topic] === 'undefined') {
+  if (out[item.topic] === undefined) {
     out[item.topic] = {
       topic: item.topic,
       entries: [item],
@@ -167,9 +165,9 @@ const reducer = (topics, item) => {
 const rev = list.reverse().reduce(reducer, groups);
 
 function HeadingText(props) {
-  const { link, title } = props;
+  const {link, title} = props;
 
-  const linked = typeof link !== 'undefined';
+  const linked = link !== undefined;
   if (linked) {
     return <a href={link}>{title}</a>;
   }
@@ -178,16 +176,16 @@ function HeadingText(props) {
 }
 
 function SpeakingTopic(props) {
-  const { topic, entries } = props;
+  const {topic, entries} = props;
 
   return (
     <section>
       <h3>{topic}</h3>
       {entries.map((item) => (
-        <div className="speaking-item">
+        <div key={item.title} className="speaking-item">
           <time>{item.d}</time>
           <h4>
-            <HeadingText title={item.title} link={item.link} key={item.title} />
+            <HeadingText key={item.title} title={item.title} link={item.link} />
           </h4>
 
           <div>{item.venue}</div>
@@ -210,60 +208,34 @@ function Speaking() {
         </p>
         <h4>Here&#8217;s an example from 2013:</h4>
         <iframe
+          allowFullScreen
           id="ls_embed_1510843784"
           src="https://livestream.com/accounts/646193/events/2474611/player?width=560&height=315&enableInfoAndActivity=true&defaultDrawer=&autoPlay=true&mute=false"
           width="560"
           height="315"
           frameBorder="0"
           scrolling="no"
-          allowFullScreen
-          title="Video of &quot;Taming Galactus&quot;"
+          title='Video of "Taming Galactus"'
         />
       </div>
       <p>
         <a href="mailto:booking@overtype.com">
           Drop me an email at
-          <strong>
-            booking@overtype.com
-          </strong>
+          <strong>booking@overtype.com</strong>
         </a>
-
         to book me for your event.
       </p>
       <h4>
-        Here&lsquo;s a fuller list of topics and talks I&lsquo;ve given over the past few
-        years:
+        Here&lsquo;s a fuller list of topics and talks I&lsquo;ve given over the
+        past few years:
       </h4>
       <div className="speaking">
         {Object.keys(rev).map((key) => (
-          <SpeakingTopic topic={rev[key].topic} entries={rev[key].entries} />
+          <SpeakingTopic key={rev[key].topic} topic={rev[key].topic} entries={rev[key].entries} />
         ))}
       </div>
     </article>
   );
 }
-
-const SpeakingItem = PropTypes.shape({
-  d: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  link: PropTypes.string,
-  venue: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  topic: PropTypes.string.isRequired,
-});
-SpeakingItem.defaultProps = {
-  link: undefined,
-};
-
-HeadingText.propTypes = {
-  link: PropTypes.string,
-  title: PropTypes.string.isRequired,
-};
-HeadingText.defaultProps = { link: undefined };
-
-SpeakingTopic.propTypes = {
-  topic: PropTypes.string.isRequired,
-  entries: PropTypes.arrayOf(SpeakingItem).isRequired,
-};
 
 export default Speaking;

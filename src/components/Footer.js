@@ -1,4 +1,3 @@
-import React from 'react';
 import './Footer.css';
 
 const d = new Date();
@@ -7,15 +6,17 @@ function Footer() {
   return (
     <footer className="foot">
       <div className="copyright">
-        &copy;
-        {' '}
-        { d.getFullYear() }
-        {' '}
-        Peter Olson Some Rights Reserved
+        &copy; {d.getFullYear()} Peter Olson Some Rights Reserved
       </div>
       <div className="contact">
         <a href="mailto:peter@overtype.com">Email</a>
-        <a href="https://bsky.app/profile/overtype.com" target="_blank" rel="noopener noreferrer">Bluesky</a>
+        <a
+          href="https://bsky.app/profile/overtype.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Bluesky
+        </a>
         <a
           href="https://www.linkedin.com/in/peterjolson/"
           target="_blank"
