@@ -6,7 +6,8 @@
 .speaking section {
 	width: 30%;
 	margin-bottom: 5%;
-	/*padding-right: 10px;*/
+
+	/* padding-right: 10px; */
 	margin-right: 2%;
 }
 
@@ -16,17 +17,18 @@
 }
 
 .speaking h3 {
-	/*background-color: #4A90E2;*/
+	/* background-color: #4A90E2; */
 	padding: 5px;
 	font-size: 200%;
 	color: #4A90E2;
 	line-height: 120%;
+
 	/* opacity: 0.5; */
 }
 
 .speaking h4 {
 	display: block;
-	margin: 0px;
+	margin: 0;
 }
 
 .speaking-item {

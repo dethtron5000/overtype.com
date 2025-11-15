@@ -1,19 +1,18 @@
-.Main {
+.main {
   text-align: center;
-  width: 100%;
 }
 
-.Main header {
+.main header {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   position: fixed;
 }
 
-.Main-title {
+.main-title {
   font-weight: 700;
   font-size: 600%;
-  color: #E24ADF;
+  color: #e24adf;
   text-transform: uppercase;
   mix-blend-mode: screen;
   left: 0;
@@ -21,8 +20,9 @@
 }
 
 .blu {
-  color: #4A90E2;
+  color: #4a90e2;
 }
+
 .purple {
   left: 2%;
   top: 0;
@@ -31,10 +31,17 @@
 
 .modal-label {
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  bottom: 0;
+  right: 0;
 }
 
+.main > svg {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
+}
 
-
-
+.main-container {
+  height: calc(100vh - 100px);
+}

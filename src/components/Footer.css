@@ -8,10 +8,12 @@
 	justify-content: flex-end;
 
 }
+
 .contact {
 	display: flex;
 	justify-content: flex-end;
 }
+
 .foot div:first-child {
 	margin-right: auto;
 	margin-left: 15px;
@@ -20,6 +22,7 @@
 .copyright {
 	padding: 5px;
 }
+
 .contact a {
 	border: none;
 	color: #E24ADF;

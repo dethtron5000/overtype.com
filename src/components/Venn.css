@@ -24,10 +24,12 @@
 .sm-circle {
 	fill: #eaeaea;
 }
+
 .guideline {
 	stroke: #eaeaea;
 	stroke-width: 1;
 }
+
 .center-circle {
 	stroke: #0C067E; 
 	stroke-dasharray: 1,2;

@@ -1,20 +1,24 @@
 import './Main.css';
 import Interference from '../components/Interference.js';
-/*  <div className="modal-label">
-      What&#39;s going on here?
-    </div> */
+import { useMeasure } from "@uidotdev/usehooks";
 
 function Main() {
+
+  const [metricref, { width }] = useMeasure();
+  const [containerref, {height}] = useMeasure();
+
   return (
-    <div className="Main">
-      <header className="Main-header">
-        <h1 className="Main-title blu">Overtype</h1>
-        <h1 className="Main-title purple">Overtype</h1>
-      </header>
-      <Interference
-        width={window.innerWidth}
-        height={window.innerHeight - 100}
-      />
+    <div className="main-container" ref={containerref}>	  
+      <div className="main" ref={metricref}>
+        <Interference
+          width={width}
+          height={height}
+        />
+        <header className="main-header">
+          <h1 className="main-title blu">Overtype</h1>
+          <h1 className="main-title purple">Overtype</h1>
+        </header>
+      </div>
     </div>
   );
 }
