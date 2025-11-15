@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div>
+  <nav
+    class="nav"
+  >
+    <a
+      aria-current="page"
+      class=""
+      data-discover="true"
+      href="#/"
+    >
+      home
+    </a>
+    <a
+      class=""
+      data-discover="true"
+      href="#/about"
+    >
+      about
+    </a>
+    <a
+      class=""
+      data-discover="true"
+      href="#/speaking"
+    >
+      speaking
+    </a>
+  </nav>
+</div>
+`;

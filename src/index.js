@@ -1,5 +1,5 @@
 import {createRoot} from 'react-dom/client';
-import {Routes, Route, HashRouter} from 'react-router-dom';
+import {Routes, Route, HashRouter} from 'react-router';
 import Main from './pages/Main.js';
 import Bio from './pages/Bio.js';
 import Speaking from './pages/Speaking.js';

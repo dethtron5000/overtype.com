@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div>
+  <svg
+    id="mainsvg"
+    preserveAspectRatio="xMinYMin meet"
+    viewBox="0 0 0 0"
+  >
+    <g
+      transform="translate(0,0)"
+    />
+  </svg>
+</div>
+`;

@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div>
+  <div
+    id="venn"
+  >
+    <svg
+      height="0"
+      width="0"
+    >
+      <g>
+        <circle
+          class="blender lg"
+          cx="0"
+          cy="0"
+          r="0"
+        />
+        <circle
+          class="blender lg"
+          cx="0"
+          cy="0"
+          r="0"
+        />
+        <circle
+          class="blender lg"
+          cx="0"
+          cy="0"
+          r="0"
+        />
+        <circle
+          class="sm-circle"
+          cx="0"
+          cy="0"
+          r="5"
+        />
+        <circle
+          class="sm-circle"
+          cx="0"
+          cy="0"
+          r="5"
+        />
+        <circle
+          class="sm-circle"
+          cx="0"
+          cy="0"
+          r="5"
+        />
+        <text
+          class="venn-text"
+          id="textblock-0"
+          x="5"
+          y="5"
+        >
+          Product & Design
+        </text>
+        <text
+          class="venn-text"
+          id="textblock-1"
+          x="5"
+          y="5"
+        >
+          Technology
+        </text>
+        <text
+          class="venn-text"
+          id="textblock-2"
+          x="5"
+          y="5"
+        >
+          Organizations & Systems
+        </text>
+        <line
+          class="guideline"
+          x1="0"
+          x2="0"
+          y1="0"
+          y2="0"
+        />
+        <line
+          class="guideline"
+          x1="0"
+          x2="0"
+          y1="0"
+          y2="0"
+        />
+        <line
+          class="guideline"
+          x1="0"
+          x2="0"
+          y1="0"
+          y2="0"
+        />
+      </g>
+    </svg>
+  </div>
+</div>
+`;

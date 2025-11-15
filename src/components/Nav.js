@@ -1,16 +1,16 @@
-import {NavLink} from 'react-router-dom';
+import {NavLink} from 'react-router';
 import './Nav.css';
 
 function Nav() {
   return (
     <nav className="nav">
-      <NavLink exact to="/">
+      <NavLink to="/" className={ ({isActive}) => (isActive ? '' : '')   }>
         home
       </NavLink>
-      <NavLink exact activeClassName="selected" to="/about">
+      <NavLink to="/about">
         about
       </NavLink>
-      <NavLink exact activeClassName="selected" to="/speaking">
+      <NavLink to="/speaking">
         speaking
       </NavLink>
     </nav>

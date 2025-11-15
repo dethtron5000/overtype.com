@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div>
+  <footer
+    class="foot"
+  >
+    <div
+      class="copyright"
+    >
+      © 
+      2025
+       Peter Olson Some Rights Reserved
+    </div>
+    <div
+      class="contact"
+    >
+      <a
+        href="mailto:peter@overtype.com"
+      >
+        Email
+      </a>
+      <a
+        href="https://bsky.app/profile/overtype.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Bluesky
+      </a>
+      <a
+        href="https://www.linkedin.com/in/peterjolson/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        LinkedIn
+      </a>
+      <a
+        href="https://stackoverflow.com/users/1540902/dethtron5000?tab=profile"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Stack Overflow
+      </a>
+      <a
+        href="https://github.com/dethtron5000"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        GitHub
+      </a>
+    </div>
+  </footer>
+</div>
+`;

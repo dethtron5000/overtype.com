@@ -1,11 +1,12 @@
 import {render} from '@testing-library/react'
 import '@testing-library/jest-dom'
-import Bio from './Bio.js';
+import Interference from './Interference.js';
 
 test('renders without crashing', () => {
-  const {container} = render(<Bio />)
+  const {container} = render(<Interference />)
 
   expect(container).toMatchSnapshot();
 
 
 });
+

@@ -1,9 +1,16 @@
 import {render} from '@testing-library/react'
 import '@testing-library/jest-dom'
-import Bio from './Bio.js';
+import Nav from './Nav.js';
+
+import {HashRouter} from 'react-router';
 
 test('renders without crashing', () => {
-  const {container} = render(<Bio />)
+  const {container} = render(
+    <HashRouter>
+      <Nav />
+    </HashRouter>
+  )
+  
 
   expect(container).toMatchSnapshot();
 
