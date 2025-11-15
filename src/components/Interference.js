@@ -109,7 +109,7 @@ function Interference({width = 0, height=0}) {
     const intervalId = setInterval(() => {
       if(direction === 1) {
         setElems(appendLine)
-        if(elems.length > 5) {
+        if(elems.length > 20) {
           setDirection(-1)
         }
       } else {
