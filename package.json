@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "d3": "^7.9.0",
-    "npm": "^11.6.2",
+    "npm": "^11.6.4",
     "prop-types": "^15.8.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
