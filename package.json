@@ -39,8 +39,8 @@
     "jest-dom": "^4.0.0",
     "react-scripts": "^5.0.1",
     "react-test-renderer": "^19.2.3",
-    "stylelint": "^17.1.1",
-    "stylelint-config-standard": "^39.0.1"
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard": "^40.0.t0"
   },
   "overrides": {
     "typescript": "^5.9.3"
