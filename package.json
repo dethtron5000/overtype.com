@@ -6,7 +6,7 @@
     "d3": "^7.9.0",
     "npm": "^11.12.1",
     "prop-types": "^15.8.1",
-    "react": "^19.2.3",
+    "react": "^19.2.5",
     "react-dom": "^19.2.3",
     "react-router": "^7.14.0",
     "react-router-dom": "^7.14.0",
