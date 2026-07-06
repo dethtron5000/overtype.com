@@ -123,7 +123,7 @@ function Interference({width = 0, height=0}) {
     return () => {
       clearInterval(intervalId);
     };
-  }, [width,height,direction,elems]);
+  }, [width,height,direction,elems,markLine]);
 
 
   return (
