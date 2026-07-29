@@ -1,11 +1,12 @@
 import {render} from '@testing-library/react'
 import '@testing-library/jest-dom'
-import Footer from './Footer.js';
+import Interference from './Interference.jsx';
 
 test('renders without crashing', () => {
-  const {container} = render(<Footer />)
+  const {container} = render(<Interference />)
 
   expect(container).toMatchSnapshot();
 
 
 });
+

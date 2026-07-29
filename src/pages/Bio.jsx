@@ -1,5 +1,5 @@
 import './Bio.css';
-import Venn from '../components/Venn.js';
+import Venn from '../components/Venn.jsx';
 
 function Bio() {
   return (

@@ -4,9 +4,10 @@ import eslintReact from '@eslint-react/eslint-plugin';
 import {defineConfig,globalIgnores} from 'eslint/config';
 import stylistic from '@stylistic/eslint-plugin';
 import jest from 'eslint-plugin-jest';
+import html from "@html-eslint/eslint-plugin";
 
 export default defineConfig([
-	globalIgnores(["build/"]),
+	globalIgnores(["dist/","build/"]),
 	{
 		files: ['**/*.js', '**/*.jsx'],
 
@@ -30,4 +31,15 @@ export default defineConfig([
 		},
 
 	},
+  {
+    files: ["**/*.html"],
+    plugins: {
+      html,
+    },
+    extends: ["html/recommended"],
+    language: "html/html",
+    rules: {
+      "html/use-baseline": "off"
+    }
+  }
 ]);

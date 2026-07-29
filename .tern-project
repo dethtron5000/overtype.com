@@ -1,0 +1,23 @@
+{
+  "capabilities": [],
+  "libs": [
+    "browser",
+    "ecmascript"
+  ],
+  "plugins": {
+    "node": {},
+    "es_modules": {},
+    "modules": {},
+    "react": {}
+  },
+  "dontLoad": [
+    "node_modules/**",
+    "build/**",
+    "dist/**",
+    "public/**"
+  ],
+  "loadEagerly": [
+    "src/**/*.js",
+    "src/**/*.jsx"
+  ]
+}

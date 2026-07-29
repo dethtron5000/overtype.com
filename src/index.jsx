@@ -1,10 +1,10 @@
 import {createRoot} from 'react-dom/client';
 import {Routes, Route, HashRouter} from 'react-router';
-import Main from './pages/Main.js';
-import Bio from './pages/Bio.js';
-import Speaking from './pages/Speaking.js';
-import Nav from './components/Nav.js';
-import Footer from './components/Footer.js';
+import Main from './pages/Main.jsx';
+import Bio from './pages/Bio.jsx';
+import Speaking from './pages/Speaking.jsx';
+import Nav from './components/Nav.jsx';
+import Footer from './components/Footer.jsx';
 import './index.css';
 
 const container = document.querySelector('#root');

@@ -25,7 +25,7 @@ jobs:
       uses: actions/setup-node@v3
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm test
+    - run: npm run test-build
     
     - name: update remote repo
       uses: garygrossgarten/github-action-ssh@release

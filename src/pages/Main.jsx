@@ -1,5 +1,5 @@
 import './Main.css';
-import Interference from '../components/Interference.js';
+import Interference from '../components/Interference.jsx';
 import { useMeasure } from "@uidotdev/usehooks";
 
 function Main() {
