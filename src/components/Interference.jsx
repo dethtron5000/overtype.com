@@ -83,29 +83,31 @@ function Interference({width = 0, height=0}) {
     // return lines
   }
 
-  const markLine = (lines) => {
-    if(lines.length === 0) {
-      return [];
-    }
-
-    const ext = Math.floor(Math.random()*lines.length)
-
-    console.log(ext,lines[ext]);
-
-    const newelem = lines[ext]
-    newelem.className = 'sparkline-fadeout' 
-
-    setTimeout(
-      () => {
-        setElems(removeLine)
-      }, 500
-    )
-
-    return lines.with(ext,newelem)
-  }
 
   useEffect(() => {
-    
+    let to
+
+    const markLine = (lines) => {
+      if(lines.length === 0) {
+        return [];
+      }
+
+      const ext = Math.floor(Math.random()*lines.length)
+
+      console.log(ext,lines[ext]);
+
+      const newelem = lines[ext]
+      newelem.className = 'sparkline-fadeout' 
+
+      to = setTimeout(
+        () => {
+          setElems(removeLine)
+        }, 500
+      )
+
+      return lines.with(ext,newelem)
+    }
+
     const intervalId = setInterval(() => {
       if(direction === 1) {
         setElems(appendLine)
@@ -121,9 +123,10 @@ function Interference({width = 0, height=0}) {
     }, 2000); 
 
     return () => {
+      clearTimeout(to);
       clearInterval(intervalId);
     };
-  }, [width,height,direction,elems,markLine]);
+  }, [width,height,direction,elems]);
 
 
   return (
