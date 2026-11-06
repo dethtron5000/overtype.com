@@ -15,7 +15,7 @@
     "preview": "vite preview",
     "test": "eslint && vitest --reporter=verbose",
     "lint": "eslint --fix",
-    "test-build": "eslint && vitest --reporter=github-actions"
+    "test-build": "eslint && npx vitest run --reporter=github-actions"
   },
   "devDependencies": {
     "@babel/core": "^8.0",
